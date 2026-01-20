@@ -2,7 +2,7 @@
   "updates": {
     "windows": {
       "open-url": "",
-      "latest-version": "0.2.0",
+      "latest-version": "0.2.1",
       "download-url": "https://xzapps.github.io/MarkBin/MarkBinUpdate.zip",
       "changelog": "This is an example changelog for Windows. Go on...",
       "mandatory-update": true
