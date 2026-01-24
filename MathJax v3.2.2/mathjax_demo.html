@@ -1,0 +1,32 @@
+<!--
+Source - https://stackoverflow.com/a
+Posted by Davide Cervone, modified by community. See post 'Timeline' for change history
+Retrieved 2026-01-24, License - CC BY-SA 4.0
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MathJax Test</title>
+<script>
+MathJax = {
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(() => {
+        const list = MathJax.startup.document.getMathItemsWithin(document.body);
+        for (const item of list) {
+          alert(item.math);
+        }
+      });
+    }
+  }
+};
+</script>
+<script type="text/javascript" defer="" src="es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <p>The price: \( 1+2=3 \)</p>
+</body>
+</html>
