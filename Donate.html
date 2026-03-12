@@ -1,68 +1,205 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate 捐款</title>
     <style>
-        .parent {
-            display: flex;
-            justify-content: center;
-            /* 可以根据需要设置具体的样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
         }
 
-        .child {
-            /* 可以根据需要设置具体的样式 */
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px 0;
+        }
+
+        .donate-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .section-desc {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .payment-card {
+            text-align: center;
+        }
+
+        .payment-card h2 {
+            margin-bottom: 15px;
+            color: #34495e;
+            font-size: 20px;
+        }
+
+        .payment-card img {
+            width: 260px;
+            height: 260px;
+            border-radius: 8px;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .payment-card img:hover {
+            transform: scale(1.02);
+        }
+
+        .paypal-section {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 20px;
+        }
+
+        .paypal-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .paypal-form table {
+            width: 100%;
+            margin-bottom: 15px;
+            border-collapse: collapse;
+        }
+
+        .paypal-form td {
+            padding: 8px 0;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .paypal-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .paypal-form input[type="text"]:focus {
+            border-color: #3498db;
+        }
+
+        .paypal-form input[type="image"] {
+            display: block;
+            margin: 0 auto;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .paypal-form input[type="image"]:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .donate-container {
+                padding: 20px;
+                margin: 0 15px;
+            }
+
+            .payment-methods {
+                gap: 30px;
+            }
+
+            .payment-card img {
+                width: 220px;
+                height: 220px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .payment-card img {
+                width: 180px;
+                height: 180px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="donate-container">
+        <!-- PayPal 英文捐款区域 -->
+        <div class="paypal-section">
+            <h1 class="section-title">Donate</h1>
+            <p class="section-desc">Thank you for showing your support! Every bit helps</p>
+            
+            <div class="paypal-form">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="95CE3787FRSBW" />
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="hidden" name="on0" value="Thank you for showing your support and appreciation for the project" />
+                                Thank you for showing your support and appreciation for the project
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="os0" maxLength="200" placeholder="Optional message (max 200 characters)" />
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <input type="image" 
+                           src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" 
+                           border="0" 
+                           name="submit" 
+                           title="PayPal - The safer, easier way to pay online!" 
+                           alt="Pay Now" />
+                </form>
+            </div>
+        </div>
 
-    <div class="parent">
-        <div class="child">
-            <h1>捐款</h1>
-            <p>感谢您的支持</p>
+        <!-- 中文捐款区域 -->
+        <h1 class="section-title">捐款</h1>
+        <p class="section-desc">感谢您的支持，您的每一份帮助都至关重要</p>
 
-            <table>
-                <tr>
-                    <td>
-                        <h2>微信</h2>
-                        <p>
-                            <img src="Donate/weixindonate.png" width="260" height="260" />
-                        </p>
-                    </td>
-                    <td style="padding-left:50px;">
-                        <h2>支付宝</h2>
-                        <p>
-                            <img src="Donate/zhifubaodonate.png" width="260" height="260" />
-                        </p>
-                    </td>
-                </tr>
-            </table>
-            <h1>Donate</h1>
-            <p>Thank you for showing your support!</p>
-            <h2>PayPal</h2>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick" />
-                <input type="hidden" name="hosted_button_id" value="95CE3787FRSBW" />
-                <table>
-                    <tr>
-                        <td>
-                            <input type="hidden" name="on0" value="Thank you for showing your support and appreciation for the proj" />
-                            Thank you for showing your support and appreciation for the project
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="os0" maxLength="200" />
-                        </td>
-                    </tr>
-                </table>
-                <input type="hidden" name="currency_code" value="USD" />
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="有了PayPal，您可以更安全便捷地在线付款！" alt="立即购买" />
-            </form>
+        <!-- 微信/支付宝支付方式 -->
+        <div class="payment-methods">
+            <div class="payment-card">
+                <h2>微信</h2>
+                <img src="Donate/weixindonate.png" alt="微信捐款二维码" />
+            </div>
+            <div class="payment-card">
+                <h2>支付宝</h2>
+                <img src="Donate/zhifubaodonate.png" alt="支付宝捐款二维码" />
+            </div>
         </div>
     </div>
-
-    
 </body>
 </html>
