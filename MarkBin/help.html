@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkBin - User Help Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        body {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f9fafb;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        h1 {
+            color: #2563eb;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: #1e40af;
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem;
+            padding-left: 0.8rem;
+            border-left: 4px solid #2563eb;
+        }
+        h3 {
+            color: #374151;
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.8rem;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        ul, ol {
+            margin: 0 0 1rem 2rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        code {
+            background-color: #e5e7eb;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: "Consolas", "Monaco", monospace;
+            color: #dc2626;
+        }
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .menu-table th, .menu-table td {
+            border: 1px solid #e5e7eb;
+            padding: 0.8rem 1rem;
+            text-align: left;
+        }
+        .menu-table th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .tip-box {
+            background-color: #dbeafe;
+            border-left: 4px solid #2563eb;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .note-box {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: #6b7280;
+            padding-top: 1rem;
+            border-top: 2px solid #e5e7eb;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MarkBin Help Documentation</h1>
+        <p>Free WYSIWYG Markdown Editor for Efficient Content Creation</p>
+    </header>
+
+    <main>
+        <section class="section-card">
+            <h2>1. Overview</h2>
+            <p>MarkBin is a <strong>free, WYSIWYG (What You See Is What You Get) Markdown editor</strong> designed for writers, content creators, and developers. It supports seamless switching between <strong>Source Code Editor</strong> and <strong>Visual Editor</strong>, making it easy to write and preview Markdown content in real time.</p>
+            <p>With support for standard Markdown syntax and GitHub Flavored Markdown (GFM) extensions, MarkBin allows you to create rich documents with tables, images, mathematical formulas, and code blocks. It also includes essential tools like find & replace, multilingual support, export options, and customizable themes to enhance your writing experience.</p>
+        </section>
+
+        <section class="section-card">
+            <h2>2. Core Editing Modes</h2>
+            <p>MarkBin provides two editing modes to suit different user preferences:</p>
+            <ul>
+                <li><strong>Visual Editor</strong>: A WYSIWYG interface that renders Markdown content in real time, ideal for beginners or users who prefer a visual writing experience.</li>
+                <li><strong>Source Code Editor</strong>: A raw Markdown editor for advanced users who want precise control over syntax and direct access to the underlying text.</li>
+            </ul>
+            <p>You can switch between these modes using the tabs at the bottom of the editor window, with all content automatically synced between modes.</p>
+        </section>
+
+        <section class="section-card">
+            <h2>3. Menu Bar Functions</h2>
+
+            <h3>3.1 File Menu</h3>
+            <table class="menu-table">
+                <thead>
+                    <tr>
+                        <th>Menu Item</th>
+                        <th>Shortcut</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>New</td>
+                        <td>Ctrl+N</td>
+                        <td>Create a new blank Markdown document</td>
+                    </tr>
+                    <tr>
+                        <td>New Window</td>
+                        <td>Ctrl+Shift+N</td>
+                        <td>Open a new MarkBin window</td>
+                    </tr>
+                    <tr>
+                        <td>Open</td>
+                        <td>Ctrl+O</td>
+                        <td>Open an existing Markdown file (.md)</td>
+                    </tr>
+                    <tr>
+                        <td>Save</td>
+                        <td>Ctrl+S</td>
+                        <td>Save the current document</td>
+                    </tr>
+                    <tr>
+                        <td>Save As</td>
+                        <td>Ctrl+Shift+S</td>
+                        <td>Save the current document with a new name/location</td>
+                    </tr>
+                    <tr>
+                        <td>Export</td>
+                        <td>—</td>
+                        <td>Export the document to PDF, Word (.docx), or HTML formats</td>
+                    </tr>
+                    <tr>
+                        <td>Print</td>
+                        <td>Alt+Shift+P</td>
+                        <td>Print the current document</td>
+                    </tr>
+                    <tr>
+                        <td>Close</td>
+                        <td>Ctrl+W</td>
+                        <td>Close the current document window</td>
+                    </tr>
+                    <tr>
+                        <td>Recently opened</td>
+                        <td>—</td>
+                        <td>Access a list of recently edited files</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.2 Edit Menu</h3>
+            <table class="menu-table">
+                <thead>
+                    <tr>
+                        <th>Menu Item</th>
+                        <th>Shortcut</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>undo</td>
+                        <td>Ctrl+Z</td>
+                        <td>Undo the last action</td>
+                    </tr>
+                    <tr>
+                        <td>redo</td>
+                        <td>Ctrl+Y</td>
+                        <td>Redo the previously undone action</td>
+                    </tr>
+                    <tr>
+                        <td>copy</td>
+                        <td>Ctrl+C</td>
+                        <td>Copy selected content to clipboard</td>
+                    </tr>
+                    <tr>
+                        <td>cut</td>
+                        <td>Ctrl+X</td>
+                        <td>Cut selected content to clipboard</td>
+                    </tr>
+                    <tr>
+                        <td>Paste</td>
+                        <td>Ctrl+V</td>
+                        <td>Paste content from clipboard</td>
+                    </tr>
+                    <tr>
+                        <td>Paste as Plain text</td>
+                        <td>Ctrl+Shift+V</td>
+                        <td>Paste content as plain text (removes formatting)</td>
+                    </tr>
+                    <tr>
+                        <td>Delete</td>
+                        <td>Ctrl+D</td>
+                        <td>Delete selected content</td>
+                    </tr>
+                    <tr>
+                        <td>Select All</td>
+                        <td>Ctrl+A</td>
+                        <td>Select all content in the document</td>
+                    </tr>
+                    <tr>
+                        <td>find</td>
+                        <td>Ctrl+F</td>
+                        <td>Open the find panel to search for text</td>
+                    </tr>
+                    <tr>
+                        <td>replace</td>
+                        <td>Ctrl+H</td>
+                        <td>Open the find & replace panel to modify text</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.3 Format Menu</h3>
+            <table class="menu-table">
+                <thead>
+                    <tr>
+                        <th>Menu Item</th>
+                        <th>Shortcut</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bold</td>
+                        <td>Ctrl+B</td>
+                        <td>Apply bold formatting to selected text</td>
+                    </tr>
+                    <tr>
+                        <td>Italic</td>
+                        <td>Ctrl+I</td>
+                        <td>Apply italic formatting to selected text</td>
+                    </tr>
+                    <tr>
+                        <td>Strikethrough</td>
+                        <td>Alt+Shift+5</td>
+                        <td>Apply strikethrough formatting to selected text</td>
+                    </tr>
+                    <tr>
+                        <td>Paragraph</td>
+                        <td>Ctrl+0</td>
+                        <td>Set text to normal paragraph style</td>
+                    </tr>
+                    <tr>
+                        <td>Heading 1-6</td>
+                        <td>Ctrl+1 to 6</td>
+                        <td>Apply heading levels 1 through 6</td>
+                    </tr>
+                    <tr>
+                        <td>Quote</td>
+                        <td>Ctrl+Shift+Q</td>
+                        <td>Wrap selected text in a blockquote</td>
+                    </tr>
+                    <tr>
+                        <td>Ordered list</td>
+                        <td>Ctrl+Shift+[</td>
+                        <td>Create an ordered (numbered) list</td>
+                    </tr>
+                    <tr>
+                        <td>Unordered list</td>
+                        <td>Ctrl+Shift+]</td>
+                        <td>Create an unordered (bulleted) list</td>
+                    </tr>
+                    <tr>
+                        <td>horizon</td>
+                        <td>Ctrl+Shift+H</td>
+                        <td>Insert a horizontal rule</td>
+                    </tr>
+                    <tr>
+                        <td>LaTeX</td>
+                        <td>Ctrl+Shift+M</td>
+                        <td>Insert a LaTeX mathematical formula</td>
+                    </tr>
+                    <tr>
+                        <td>Insert Table</td>
+                        <td>Ctrl+T</td>
+                        <td>Insert a new table</td>
+                    </tr>
+                    <tr>
+                        <td>Inline code</td>
+                        <td>Ctrl+Shift+`</td>
+                        <td>Wrap selected text in inline code formatting</td>
+                    </tr>
+                    <tr>
+                        <td>Code block</td>
+                        <td>Ctrl+Shift+K</td>
+                        <td>Insert a syntax-highlighted code block</td>
+                    </tr>
+                    <tr>
+                        <td>Link</td>
+                        <td>Ctrl+K</td>
+                        <td>Insert a hyperlink</td>
+                    </tr>
+                    <tr>
+                        <td>Remove link</td>
+                        <td>—</td>
+                        <td>Remove hyperlink formatting from selected text</td>
+                    </tr>
+                    <tr>
+                        <td>Picture</td>
+                        <td>Ctrl+Shift+I</td>
+                        <td>Insert an image</td>
+                    </tr>
+                    <tr>
+                        <td>Clear</td>
+                        <td>Ctrl+\</td>
+                        <td>Clear all formatting from selected text</td>
+                    </tr>
+                    <tr>
+                        <td>Table</td>
+                        <td>—</td>
+                        <td>Submenu for table editing (add/remove rows/columns, align cells, etc.)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.4 Option Menu</h3>
+            <table class="menu-table">
+                <thead>
+                    <tr>
+                        <th>Menu Item</th>
+                        <th>Shortcut</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Configuration</td>
+                        <td>Ctrl+,</td>
+                        <td>Open the settings panel to customize editor behavior</td>
+                    </tr>
+                    <tr>
+                        <td>backup</td>
+                        <td>—</td>
+                        <td>Manage automatic backup settings</td>
+                    </tr>
+                    <tr>
+                        <td>Zoom</td>
+                        <td>—</td>
+                        <td>Adjust the editor zoom level (in/out/reset)</td>
+                    </tr>
+                    <tr>
+                        <td>Theme</td>
+                        <td>—</td>
+                        <td>Submenu for changing editor and code block themes</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.5 Help Menu</h3>
+            <table class="menu-table">
+                <thead>
+                    <tr>
+                        <th>Menu Item</th>
+                        <th>Shortcut</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Help</td>
+                        <td>F1</td>
+                        <td>Open this help documentation</td>
+                    </tr>
+                    <tr>
+                        <td>Donate</td>
+                        <td>—</td>
+                        <td>Support the development of MarkBin</td>
+                    </tr>
+                    <tr>
+                        <td>Feedback</td>
+                        <td>—</td>
+                        <td>Submit feedback or report issues</td>
+                    </tr>
+                    <tr>
+                        <td>About Us</td>
+                        <td>—</td>
+                        <td>View information about MarkBin and its developers</td>
+                    </tr>
+                    <tr>
+                        <td>Licenses</td>
+                        <td>—</td>
+                        <td>View open-source license information</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section-card">
+            <h2>4. Advanced Features</h2>
+
+            <h3>4.1 Table Editing</h3>
+            <p>After inserting a table (via <code>Format → Insert Table</code>), you can use the Table submenu to perform advanced operations:</p>
+            <ul>
+                <li>Add new rows or columns</li>
+                <li>Move rows/columns up/down or left/right</li>
+                <li>Align cell content (left, center, right)</li>
+                <li>Delete selected rows/columns or clear table content</li>
+            </ul>
+
+            <h3>4.2 Customization & Configuration</h3>
+            <p>Access <code>Option → Configuration</code> to customize your editor:</p>
+            <ul>
+                <li><strong>Multilingual Support</strong>: Switch the interface language (English, Chinese, etc.)</li>
+                <li><strong>Themes</strong>: Change the Visual Editor theme (e.g., github-markdown-light/dark, markdown-blogger)</li>
+                <li><strong>Code Block Themes</strong>: Choose from dozens of syntax highlighting themes (e.g., dracula, monokai, github)</li>
+                <li><strong>Automatic Backup</strong>: Enable/disable auto-backup to prevent data loss</li>
+                <li><strong>Left Sidebar</strong>: Toggle the navigation sidebar (auto-generated from headings)</li>
+                <li><strong>Font & Zoom</strong>: Adjust source editor font size and overall zoom level</li>
+            </ul>
+
+            <h3>4.3 Other Useful Features</h3>
+            <ul>
+                <li><strong>Find & Replace</strong>: Quickly locate and modify text (via <code>Edit → find/replace</code>)</li>
+                <li><strong>Word Count</strong>: Real-time word/character count displayed at the bottom-right corner</li>
+                <li><strong>Left Navigation Bar</strong>: Auto-generated table of contents for quick navigation in long documents</li>
+                <li><strong>Export Options</strong>: Export to PDF, Word, or HTML while preserving formatting</li>
+                <li><strong>Right-Click Menu</strong>: Access common formatting options via context menu</li>
+                <li><strong>Auto Backup</strong>: Protect your work with automatic periodic backups</li>
+            </ul>
+        </section>
+
+        <section class="section-card">
+            <h2>5. Getting Started</h2>
+            <ol>
+                <li>Launch MarkBin and create a new document (<code>File → New</code> or Ctrl+N)</li>
+                <li>Choose your preferred editing mode (Visual Editor or Source Code Editor)</li>
+                <li>Use the Format menu or toolbar to apply text formatting, insert tables, images, formulas, or code blocks</li>
+                <li>Edit tables using the Table submenu under Format</li>
+                <li>Customize the editor via <code>Option → Configuration</code> (themes, language, backup, etc.)</li>
+                <li>Save your work regularly (<code>File → Save</code> or Ctrl+S)</li>
+                <li>Export your document to PDF/Word/HTML via <code>File → Export</code></li>
+            </ol>
+
+            <div class="tip-box">
+                <strong>Tip:</strong> Use the left navigation bar to quickly jump between sections in long documents. It auto-generates links from your headings (H1-H6).
+            </div>
+            <div class="note-box">
+                <strong>Note:</strong> Enable automatic backup in <code>Option → Configuration</code> to prevent accidental data loss. Backups are stored locally on your device.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MarkBin - Free WYSIWYG Markdown Editor</p>
+        <p>For more help, visit our GitHub repository or use the <code>Help → Feedback</code> option.</p>
+    </footer>
+</body>
+</html>

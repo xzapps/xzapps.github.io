@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AesSafe - 下载中心</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .app-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            background-color: #409eff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+        }
+        
+        .app-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .version-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: #e8f4ff;
+            color: #409eff;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .download-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .download-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background-color: #409eff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .download-btn:hover {
+            background-color: #337ecc;
+        }
+        
+        .download-info {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .download-info p {
+            margin-bottom: 8px;
+        }
+        
+        .changelog-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+        }
+        
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .changelog-list {
+            list-style: none;
+        }
+        
+        .changelog-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #f5f5f5;
+            font-size: 14px;
+        }
+        
+        .changelog-item:last-child {
+            border-bottom: none;
+        }
+        
+        .changelog-type {
+            display: inline-block;
+            width: 60px;
+            text-align: center;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 10px;
+            color: white;
+        }
+        
+        .type-feature {
+            background-color: #67c23a;
+        }
+        
+        .type-fix {
+            background-color: #e6a23c;
+        }
+        
+        .type-optimize {
+            background-color: #909399;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        /* 响应式适配 */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 10px;
+            }
+            
+            .app-name {
+                font-size: 24px;
+            }
+            
+            .download-card, .changelog-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部信息 -->
+        <div class="header">
+            <div class="app-logo">AS</div>
+            <h1 class="app-name">AesSafe</h1>
+            <span class="version-tag">最新版本：0.0.1</span>
+        </div>
+
+        <!-- 下载卡片 -->
+        <div class="download-card">
+            <a href="AesSafe.zip" class="download-btn">
+                📥 下载 Windows 版本 (64位)
+            </a>
+            <div class="download-info">
+                <p>📦 文件大小：15.8 MB</p>
+                <p>✅ 适配系统：Windows 7/8/10/11 (64位)</p>
+                <p>🔐 MD5校验：8F9D7E8B6A5C4D3E2F1A9B8C7D6E5F4A</p>
+                <p>💡 提示：下载完成后请右键以管理员身份运行安装程序</p>
+            </div>
+        </div>
+
+        <!-- 更新日志 -->
+        <div class="changelog-card">
+            <h2 class="card-title">📝 更新日志</h2>
+            <ul class="changelog-list">
+                <li class="changelog-item">
+                    <span class="changelog-type type-feature">新增</span>
+                    支持文件夹同步进度显示功能
+                </li>
+                <li class="changelog-item">
+                    <span class="changelog-type type-fix">修复</span>
+                    修复部分特殊字符文件名加密失败的问题
+                </li>
+                <li class="changelog-item">
+                    <span class="changelog-type type-optimize">优化</span>
+                    优化加密算法，提升大文件处理速度
+                </li>
+                <li class="changelog-item">
+                    <span class="changelog-type type-fix">修复</span>
+                    修复最小化到托盘后无法恢复窗口的问题
+                </li>
+            </ul>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer">
+            <p>© 2026 FolderEncryptSync 版权所有</p>
+            <p>如有下载问题，请联系：support@example.com</p>
+        </div>
+    </div>
+</body>
+</html>
